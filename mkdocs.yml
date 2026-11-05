@@ -4,6 +4,10 @@ site_description: Team notes on development best practices and tips
 # No `nav:` on purpose: MkDocs builds the menu from the docs/ folder tree,
 # so a new page shows up without editing this file.
 
+# Make --strict fail on links to missing headings, not only missing pages.
+validation:
+  anchors: warn
+
 theme:
   name: material
   features:
@@ -34,5 +38,7 @@ markdown_extensions:
   - pymdownx.superfences
   - pymdownx.tabbed:
       alternate_style: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
   - toc:
       permalink: true

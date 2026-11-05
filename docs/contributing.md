@@ -39,6 +39,18 @@ What goes wrong without it. Show the bad code or setting.
 
 Short explanation. Link to official docs.
 
+## Trade-offs
+
+Skip this section when there is only one sane way.
+
+| Option | Pros | Cons |
+|--------|------|------|
+| A      |      |      |
+| B      |      |      |
+
+!!! tip "Recommendation"
+    Which option to pick and when.
+
 ## Pitfalls
 
 !!! warning
