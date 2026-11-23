@@ -18,6 +18,7 @@ The advice is for a solo or personal repo first. Where a team needs something di
 | [Pull request settings](pull-requests.md) | Merge methods, auto-merge, deleting merged branches. |
 | [Security features](security.md) | Dependabot, secret scanning, push protection, code scanning, vulnerability reporting. |
 | [GitHub Actions settings](actions.md) | `GITHUB_TOKEN` permissions, pinning actions, fork PRs, deploy secrets. |
+| [Make a private repository public](make-public.md) | What to check before the switch, what the switch changes, and what to turn on right after. |
 
 ## What your plan allows
 
@@ -47,7 +48,7 @@ The advice is for a solo or personal repo first. Where a team needs something di
 
 **Security** ([details](security.md)):
 
-- [ ] **Dependabot alerts** and **Dependabot security updates** are on.
+- [ ] **Dependabot alerts**, **Malware alerts** and **Dependabot security updates** are on.
 - [ ] `.github/dependabot.yml` updates at least `github-actions`.
 - [ ] **Secret scanning** and **Push protection** are on.
 - [ ] Code scanning: **CodeQL analysis** uses the **Default** setup.
@@ -60,3 +61,10 @@ The advice is for a solo or personal repo first. Where a team needs something di
 - [ ] Third-party actions are pinned to a full commit SHA.
 - [ ] Fork PR workflows need approval from a maintainer.
 - [ ] Deploy secrets live in an environment, not in repository secrets.
+
+**Going public** ([details](make-public.md)):
+
+- [ ] The full history is scanned for secrets, and anything found is revoked.
+- [ ] The author emails in old commits are checked, and the rewrite decision is made before the switch.
+- [ ] Old Actions logs, issues, wiki and releases hold nothing internal.
+- [ ] After the switch: security features on, rulesets re-checked.

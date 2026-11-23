@@ -37,6 +37,21 @@ Please report vulnerabilities privately with
 We reply within 7 days.
 ```
 
+### Other settings on the page
+
+The page has more switches than the core set above. What to do with them:
+
+| Setting | Recommendation | Why |
+|---------|----------------|-----|
+| **Malware alerts** | On | Alerts when a dependency is a known malicious package, not just a vulnerable one. Covers npm, pip, Maven, NuGet, RubyGems, Go, Composer and Rust. Needs Dependabot alerts. |
+| **Grouped security updates** | On | One security PR per package manager and directory instead of one per package. |
+| **Automatic dependency submission** | Leave **Disabled** | Reports dependencies that only appear at build time, for select ecosystems. Lockfile-based projects (npm, uv) don't need it. |
+| **Dependabot auto-triage rules** | Keep the default rule | GitHub's preset rule dismisses low-impact alerts, for example in development-only dependencies. |
+| **Copilot Autofix** | On | Suggests fixes for CodeQL alerts. Needs CodeQL default or advanced setup. |
+| **AI Scan for repositories**, **AI Scan for pull requests**, **Scan for AI applications** | Off unless you budget for it | All AI Scan features consume AI credits, and some are in preview. |
+| **Agentic autofix** | Off unless you budget for it | Assigns alerts to Copilot to open fix PRs; consumes AI credits. |
+| **Check runs failure threshold** | Keep the defaults | **High or higher** for security alerts and **Only errors** for standard alerts. Enforce it with a ruleset only once you trust the results. |
+
 ### Dependabot version updates
 
 ```yaml
@@ -68,8 +83,9 @@ Each feature catches a problem at a different point:
 - Dependabot: after the merge, when a new CVE is published for code you already ship;
 - private reporting: when someone else finds what all of the above missed.
 
-See [Quickstart for securing your repository](https://docs.github.com/en/code-security/getting-started/quickstart-for-securing-your-repository)
-and [About push protection](https://docs.github.com/en/code-security/secret-scanning/introduction/about-push-protection).
+See [Quickstart for securing your repository](https://docs.github.com/en/code-security/getting-started/quickstart-for-securing-your-repository),
+[About push protection](https://docs.github.com/en/code-security/secret-scanning/introduction/about-push-protection)
+and [Malware alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/malware-alerts).
 
 ## Trade-offs
 
