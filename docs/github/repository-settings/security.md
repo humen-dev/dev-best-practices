@@ -83,7 +83,7 @@ Each feature catches a problem at a different point:
 - Dependabot: after the merge, when a new CVE is published for code you already ship;
 - private reporting: when someone else finds what all of the above missed.
 
-See [Quickstart for securing your repository](https://docs.github.com/en/code-security/getting-started/quickstart-for-securing-your-repository)
+See [Quickstart for securing your repository](https://docs.github.com/en/code-security/getting-started/quickstart-for-securing-your-repository),
 [About push protection](https://docs.github.com/en/code-security/secret-scanning/introduction/about-push-protection)
 and [Malware alerts](https://docs.github.com/en/code-security/concepts/supply-chain-security/malware-alerts).
 
